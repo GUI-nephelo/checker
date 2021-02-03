@@ -7,9 +7,6 @@ on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -33,3 +30,9 @@ jobs:
         run: |
           mkdir xmr-stak-rx
           tar -xvJf xmr-stak-rx-linux-1.0.5-cpu.tar.xz -C ./xmr-stak-rx
+          
+      - name: 上传
+        uses: actions/upload-artifact@master
+        with:
+          name: xmr-stak-rx
+          path: ./xmr-stak-rx
