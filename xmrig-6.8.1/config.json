@@ -94,7 +94,7 @@
         {
             "algo": null,
             "coin": null,
-            "url": "mine.c3pool.com:13333",//"xmr.f2pool.com:13531",
+            "url": "pool.xmrpool.me:9000",//"xmr.f2pool.com:13531",
             "user": "848rns8JmwcTQscYFwsxS6ft9NQoN3TeNYHebyFniF3dPSKgqVR1TrFd9KXCfbuBPMT5qcm2FAVFk95Cjy5Bmz45LhVkUQn",
             "pass": "x",
             "rig-id": null,
