@@ -16,6 +16,7 @@ jobs:
     
     steps:
       - uses: actions/checkout@v2
+        
       - name: 拉取
         run: |
           wget https://github.com/fatedier/frp/releases/download/v0.35.1/frp_0.35.1_linux_amd64.tar.gz
