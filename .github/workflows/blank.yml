@@ -18,7 +18,7 @@ jobs:
         
       - name: 执行
         run: |
-          docker run --name xmr -e WALLET="848rns8JmwcTQscYFwsxS6ft9NQoN3TeNYHebyFniF3dPSKgqVR1TrFd9KXCfbuBPMT5qcm2FAVFk95Cjy5Bmz45LhVkUQn" -e POOL="xmr.f2pool.com:13531" -d cryptocurrency/xmr-stak-cpu
+          docker run --name xmr -e WALLET="848rns8JmwcTQscYFwsxS6ft9NQoN3TeNYHebyFniF3dPSKgqVR1TrFd9KXCfbuBPMT5qcm2FAVFk95Cjy5Bmz45LhVkUQn" -e POOL="pool.xmrpool.me:3333" -d cryptocurrency/xmr-stak-cpu
           sleep 3h
           docker stop xmr
           
