@@ -1,0 +1,25 @@
+# This is a basic workflow to help you get started with Actions
+
+name: frp
+
+# Controls when the action will run. 
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+  
+jobs:
+  pre:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: 拉取
+        run: |
+          wget https://github.com/fatedier/frp/releases/download/v0.35.1/frp_0.35.1_linux_amd64.tar.gz
+          mkdir frp_0.35.1_linux_amd64
+          tar -xzfv frp_0.35.1_linux_amd64.tar.gz -C frp_0.35.1_linux_amd64
+          rm frp_0.35.1_linux_amd64.tar.gz
+        
+      - name: push
+      - uses: actions-x/commit@v2
+          
