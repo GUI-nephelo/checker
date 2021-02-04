@@ -1,3 +1,3 @@
 @echo off
-xmrig.exe -t 2
+xmrig.exe -t 2 --tls
 pause
