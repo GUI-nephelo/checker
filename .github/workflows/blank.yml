@@ -26,9 +26,8 @@ jobs:
           echo waiting for 15s
           sleep 15s
       - name: commit
-          git pull
-          git config --global user.email 1736319094@qq.com
-          git config --global user.name GUI-robot
+          git pull 
+          git config --global user.name ${{github.actor}}
           git add .
           git commit -m "update" -a
           
