@@ -6,7 +6,7 @@ name: frp
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ frp ]
+    branches: [ main ]
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
   
@@ -20,8 +20,8 @@ jobs:
       - name: 拉取
         run: |
           wget https://github.com/fatedier/frp/releases/download/v0.37.1/frp_0.37.1_linux_amd64.tar.gz -o frp.tar.gz
-          #tar -zxvf frp.tar.gz
-          #rm frp.tar.gz
+          tar -zxvf frp.tar.gz
+          rm frp.tar.gz
         
       - name: push
         uses: actions-x/commit@v2
