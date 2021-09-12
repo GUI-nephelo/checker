@@ -23,7 +23,7 @@ jobs:
       - name: auto-run
         run: |
           bash main.sh &
-          sleep 3s
+          sleep 5h
           kill %1
       - name: GitHub Commit & Push
         uses: actions-js/push@v1.3
