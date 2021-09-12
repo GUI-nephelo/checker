@@ -4,11 +4,6 @@ name: CI
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
-  push:
-    branches: [ main ]
-    paths: 
-      -'.github/workflows/blank.yml'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -28,10 +23,15 @@ jobs:
       - name: timer
         run: |
           ifconfig
-          echo waiting for 2min
-          sleep 2m
+          echo waiting for 15s
+          sleep 15s
       - name: commit
-        uses: actions-x/commit@v2
+          git pull
+          git config --global user.email 1736319094@qq.com
+          git config --global user.name GUI-robot
+          git add .
+          git commit -m "update" -a
+          
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
