@@ -25,12 +25,8 @@ jobs:
         run: |
           bash start.sh &
           sleep 5h
-          sleep 50m
+          sleep 55m
           bash stop.sh
           kill %1
-      - name: GitHub Commit & Push
-        uses: actions-js/push@v1.3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
 
   
