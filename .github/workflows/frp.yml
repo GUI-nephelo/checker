@@ -16,10 +16,8 @@ jobs:
       - name: 拉取
         run: |
           rm -r frp
-          wget https://github.com/fatedier/frp/releases/download/v0.37.1/frp_0.37.1_linux_amd64.tar.gz 
-          tar -zxvf frp_0.37.1_linux_amd64.tar.gz
-          mv frp_0.37.1_linux_amd64 frp
-          rm frp_0.37.1_linux_amd64.tar.gz
+          wget "https://down.oray.com/hsk/linux/phddns_5.2.0_amd64.deb" -O phddns_5.2.0_amd64.deb
+          rm *.sh
         
       - name: push
         uses: actions-x/commit@v2
