@@ -29,7 +29,6 @@ jobs:
         run: |
           git config --global user.email xxx.com
           git config --global user.name robot
-          git branch -m poop
           git add *
-          git commit -m "commit"
-          git push poop
+          git commit
+          git push
