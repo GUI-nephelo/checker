@@ -23,8 +23,9 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
+          rm [1,2,3,4].txt
           head -c 110M /dev/urandom > main.txt
-          for i in [1,2,3,4]; do
+          for i in 1 2 3 4; do
           head -c 10M /dev/urandom > $i.txt;
           done
           
