@@ -30,7 +30,6 @@ jobs:
           git lfs track "main.txt"
           git config --global user.email xxx.com
           git config --global user.name robot
-          git branch -m static
-          git add *
+          git add main.txt
           git commit -m "a"
-          git push origin static
+          git push
