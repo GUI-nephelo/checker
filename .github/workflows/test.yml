@@ -33,4 +33,4 @@ jobs:
           git branch -m static
           git add *
           git commit -m "a"
-          git push 
+          git push origin static
